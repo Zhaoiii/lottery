@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>今天吃什么</title>
+  <style>
+    /* 重置默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+    }
+
+    .wrapper {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      padding: 20px;
+      margin: 20px;
+      background-color: #c0381f;
+      box-shadow: #000000 0px 0px 10px;
+      border-radius: 50%;
+    }
+
+    .panel {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      background-color: #b7b7b7;
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .pointer {
+      position: absolute;
+      left: 79px;
+      top: 79px;
+      z-index: 10;
+      height: 30px;
+      width: 30px;
+      padding: 6px;
+      color: #fff899;
+      line-height: 15px;
+      font-size: 12px;
+      text-align: center;
+      background-color: #dc5b5b;
+      border-radius: 50%;
+      border: 1px solid #c0381f;
+    }
+
+    .pointer::after {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: -24px;
+      border-width: 12px 6px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: #c0381f;
+    }
+
+    /* .sector {
+      width: 0;
+      height: 0;
+      border-top: 120px solid #fff899;
+      border-bottom: 0px solid transparent;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-radius: 100px;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+      font-size: 12px;
+    }
+
+    .sector-inner {
+      position: absolute;
+      top: -97px;
+      left: -7px;
+      color: #c0381f
+    } */
+    /* .sector1{
+      transform-origin: 30px 60px;
+      transform: rotate(45deg);
+      border-top: 120px solid #dc5b5b;
+    }
+    .sector2{
+      transform-origin: 18px 98px;
+      transform: rotate(90deg);
+
+    } */
+    .sector{
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      border-top: 100px solid #dc5b5b;
+      border-right: 100px solid transparent;
+      transform: rotate(0deg);
+      transform-origin: bottom left;
+    }
+    .sector1{
+      transform: rotate(45deg);
+      border-top: 100px solid #fff899;
+      z-index: 1;
+    }
+    .sector2{
+      transform: rotate(90deg);
+      border-top: 100px solid #dc5b5b;
+      z-index: 1;
+    }
+    .sector3{
+      transform: rotate(135deg);
+      border-top: 100px solid #fff899;
+      z-index: 1;
+    }
+    .sector4{
+      transform: rotate(180deg);
+      border-top: 100px solid #dc5b5b;
+      z-index: 1;
+    }
+    .sector5{
+      transform: rotate(225deg);
+      border-top: 100px solid #fff899;
+      z-index: 1;
+    }
+    .sector6{
+      transform: rotate(270deg);
+      border-top: 100px solid #dc5b5b;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="panel">
+      <div class="sector ">
+        <div class="sector-inner">
+          <span>谢谢参与</span>
+        </div>
+      </div>
+      <div class="sector1 sector"></div>
+      <div class="sector2 sector"></div>
+      <div class="sector3 sector"></div>
+      <div class="sector4 sector"></div>
+      <div class="sector5 sector"></div>
+      <div class="sector6 sector"></div>
+      <div class="pointer">开始抽奖</div>
+    </div>
+  </div>
+</body>
+
+</html>
